@@ -1,0 +1,23 @@
+@Pass
+@BlendFunc(SRC_ALPHA,ONE_MINUS_SRC_ALPHA)
+FS_PREC(mediump,float)
+varying vec3 vColor;
+#ifdef VS
+attribute vec3 position;
+attribute vec3 color;
+uniform mat4 _matPVM;
+void main()
+{
+  gl_Position = _matPVM * vec4(position,1.0);
+  vColor = color;
+}
+#endif
+#ifdef FS
+
+@{default:1}
+uniform float alpha;
+void main(void)
+{
+  gl_FragColor = vec4(vColor,alpha);
+}
+#endif
