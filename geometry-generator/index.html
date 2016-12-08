@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="../static/index.css" rel="stylesheet" />
+  <script src="../static/grimoire-preset-basic.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <script type="text/goml">
+    <goml height="fit">
+      <geometry name="cylinder" type="cylinder" divide="10"/>
+      <geometry name="plane" type="plane" divide="10"/>
+      <geometry name="cone" type="cone" divide="10"/>
+      <geometry name="circle" type="circle" divide="10"/>
+      <scene>
+        <camera>
+          <camera.components>
+            <MouseCameraControl center="10" />
+          </camera.components>
+        </camera>
+        <mesh geometry="quad" color="red" position="0,0,0" />
+        <mesh geometry="cube" color="yellow" position="-2,0,0" />
+        <mesh geometry="sphere" color="green" position="2,0,0" />
+        <mesh geometry="plane" color="blue" position="-4,0,0" />
+        <mesh geometry="cone" color="purple" position="4,0,0" />
+        <mesh geometry="cylinder" color="orange" position="-6,0,0" />
+        <mesh geometry="circle" color="pink" position="6,0,0" />
+      </scene>
+    </goml>
+  </script>
+</body>
+
+</html>
