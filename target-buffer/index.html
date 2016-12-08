@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="../static/index.css" rel="stylesheet" />
+  <script src="../static/grimoire-preset-basic.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <script type="text/goml">
+    <goml height="fit">
+      <geometry name="sphere" type="sphere" divHorizontal="40" divVertical="40"/>
+      <scene>
+        <camera>
+          <camera.components>
+            <MouseCameraControl center="10" />
+          </camera.components>
+        </camera>
+        <mesh geometry="sphere" color="red" position="-2,0,0" />
+        <mesh geometry="sphere" color="blue" position="2,0,0" targetBuffer="wireframe" />
+      </scene>
+    </goml>
+  </script>
+</body>
+
+</html>
